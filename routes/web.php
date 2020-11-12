@@ -15,10 +15,9 @@ use App\Http\Controllers\SearchController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('phj')->group(function() {
     Route::get('/class-index', [ClassesController::class, 'index'])->name('class.index');
@@ -40,6 +39,4 @@ Route::prefix('phj')->group(function() {
 	Route::get('/search', [SearchController::class, 'student'])->name('search.student');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
