@@ -39,3 +39,7 @@ Route::prefix('phj')->group(function() {
 	Route::delete('/{id}/student-delete', [StudentController::class, 'destroy'])->name('student.destroy');
 	Route::get('/search', [SearchController::class, 'student'])->name('search.student');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
