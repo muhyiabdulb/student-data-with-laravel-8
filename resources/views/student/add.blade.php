@@ -130,7 +130,7 @@
                             </div>
                         </div>                              
                     </div>
-                    <button type="submit" class="btn btn-primary btn">Submit</button>
+                    <button type="submit" class="btn btn-primary btn">Save</button>
                 </div>
                 <!-- /.card-body -->
               </form>

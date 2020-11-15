@@ -43,7 +43,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                    <button type="submit" class="btn btn-primary btn">Submit</button>
+                    <button type="submit" class="btn btn-primary btn">Save</button>
                   </div>
                 </div>
                 <!-- /.card-body -->
