@@ -51,7 +51,10 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $student->nis }}</td>
                                         <td>{{ $student->name }}</td>
-                                        <td>{{ $student->birth_date }}</td>
+                                        <!-- manggil fungsi BirthDate di model student -->
+                                        <td>{{ $student->BirthDate}}</td>
+                                        <!-- tidak menggunakan function -->
+                                        <!-- <td>{{ Carbon\Carbon::parse($student->birth_date)->format('l, d F Y') }}</td> -->
                                         <td>{{ $student->gender }}</td>
                                         <td>{{ $student->class_id }}</td>
                                         <td>{{ $student->phone }}</td>

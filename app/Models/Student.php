@@ -12,8 +12,8 @@ class Student extends Model
     protected $table = 'phj_students';
     protected $fillable = ['nis', 'name', 'birth_date', 'gender', 'class_id', 'phone', 'address'];
 
-    public function getBirtDateAttribute()
+    public function getBirthDateAttribute()
     {
-        return Carbon::parse($this->attributes['birth_date'])->transalatedFormat('l, d F Y');
+        return Carbon::parse($this->attributes['birth_date'])->format('l, d F Y');
     }
 }
