@@ -26,7 +26,21 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                        <h3 class="card-title">Class Data</h3>
+                          <h3 class="card-title">Class Data</h3>
+
+                          <!-- SEARCH FORM -->
+                          <div class="card-tools">
+                            <form class="form-inline " action="{{ route('search.class') }}">
+                                <div class="input-group input-group-sm">
+                                    <input name="query" class="form-control float-right" type="search" placeholder="Search" aria-label="Search">
+                                    <div class="input-group-append">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    </div>
+                                </div>
+                            </form>
+                          </div>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">

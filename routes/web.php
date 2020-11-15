@@ -26,6 +26,7 @@ Route::prefix('phj')->group(function() {
 	Route::get('/{id}/class-edit', [ClassesController::class, 'edit'])->name('class.edit');
 	Route::put('/{id}/class-edit', [ClassesController::class, 'update'])->name('class.update');
 	Route::delete('/{id}/class-delete', [ClassesController::class, 'destroy'])->name('class.destroy');
+	Route::get('/search-class', [SearchController::class, 'class'])->name('search.class');
 });
 
 Route::prefix('phj')->group(function() {
@@ -36,7 +37,7 @@ Route::prefix('phj')->group(function() {
 	Route::get('/{id}/student-edit', [StudentController::class, 'edit'])->name('student.edit');
 	Route::put('/{id}/student-edit', [StudentController::class, 'update'])->name('student.update');
 	Route::delete('/{id}/student-delete', [StudentController::class, 'destroy'])->name('student.destroy');
-	Route::get('/search', [SearchController::class, 'student'])->name('search.student');
+	Route::get('/search-student', [SearchController::class, 'student'])->name('search.student');
 });
 
 
