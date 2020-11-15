@@ -27,7 +27,6 @@
                     <div class="card">
                         <div class="card-header">
                           <h3 class="card-title">Class Data</h3>
-
                           <!-- SEARCH FORM -->
                           <div class="card-tools">
                             <form class="form-inline " action="{{ route('search.class') }}">
@@ -44,7 +43,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="example1" class="table table-bordered table-striped mb-3">
                                 <thead>
                                     <tr>
                                         <th>No.</th>
@@ -79,8 +78,10 @@
                                     @endforelse
                                 </tbody>
                             </table>
+                            {{ $class->links() }}
                         </div>
                         <!-- /.card-body -->
+                       
                     </div>
                 <!-- /.card -->
                 </div>

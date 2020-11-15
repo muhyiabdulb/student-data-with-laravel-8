@@ -14,9 +14,8 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        return view('class.index', [
-            'class' => Classes::get()
-        ]);
+        $class = Classes::paginate(4);
+        return view('class.index', compact('class'));
     }
 
     /**
