@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('phj')->group(function() {
+Route::prefix('mab')->group(function() {
     Route::get('/class-index', [ClassesController::class, 'index'])->name('class.index');
 	Route::get('/class-add', [ClassesController::class, 'create'])->name('class.add');
 	Route::post('/class-store', [ClassesController::class, 'store'])->name('class.store');
@@ -29,7 +29,7 @@ Route::prefix('phj')->group(function() {
 	Route::get('/search-class', [SearchController::class, 'class'])->name('search.class');
 });
 
-Route::prefix('phj')->group(function() {
+Route::prefix('mab')->group(function() {
     Route::get('/student-index', [StudentController::class, 'index'])->name('student.index');
 	Route::get('/student-add', [StudentController::class, 'create'])->name('student.add');
 	Route::post('/student-store', [StudentController::class, 'store'])->name('student.store');

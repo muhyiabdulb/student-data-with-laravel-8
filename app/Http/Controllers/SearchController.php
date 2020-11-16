@@ -12,7 +12,7 @@ class SearchController extends Controller
     {
         $query = request('query');
 
-        $students = Student::where("name", "like", "%$query%")->get();
+        $students = Student::where("name", "like", "%$query%")->paginate(4);
         return view('student.index', compact('students'));
     }
 
@@ -20,7 +20,7 @@ class SearchController extends Controller
     {
         $query = request('query');
 
-        $class = Classes::where("name", "like", "%$query%")->get();
+        $class = Classes::where("name", "like", "%$query%")->paginate(4);
         return view('class.index', compact('class'));
     }
 }
