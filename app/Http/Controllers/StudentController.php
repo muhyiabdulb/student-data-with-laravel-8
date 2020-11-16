@@ -40,7 +40,7 @@ class StudentController extends Controller
     {
         // Validasi pengisian field tambah data
         $request->validate([
-            'nis' => 'required',
+            'nis' => 'required|max:8',
             'name' => 'required',
             'birth_date' => 'required',
             'gender' => 'required',

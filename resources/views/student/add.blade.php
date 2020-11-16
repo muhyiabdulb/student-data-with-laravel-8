@@ -40,7 +40,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="nis">NIS</label>
-                                <input type="text" name="nis" class="form-control mb-2 @error('nis') is-invalid @enderror" id="nis" placeholder="Enter NIS">
+                                <input type="text" name="nis" value="{{ old('nis') }}" class="form-control mb-2 @error('nis') is-invalid @enderror" id="nis" placeholder="Enter NIS">
                                 @error('nis')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -51,7 +51,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control mb-2 @error('name') is-invalid @enderror" id="name" placeholder="Enter Name">
+                                <input type="text" name="name" value="{{ old('name') }}" class="form-control mb-2 @error('name') is-invalid @enderror" id="name" placeholder="Enter Name">
                                 @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -65,7 +65,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="birth_date">Birth Date</label>
-                                <input type="date" name="birth_date" class="form-control mb-2 @error('birth_date') is-invalid @enderror" id="birth_date">
+                                <input type="date" name="birth_date" value="{{ old('birth_date') }}" class="form-control mb-2 @error('birth_date') is-invalid @enderror" id="birth_date">
                                 @error('birth_date')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -91,7 +91,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="text" name="phone" class="form-control mb-2 @error('phone') is-invalid @enderror" id="phone" placeholder="Enter Phone">
+                                <input type="text" name="phone" value="{{ old('phone') }}" class="form-control mb-2 @error('phone') is-invalid @enderror" id="phone" placeholder="Enter Phone">
                                 @error('phone')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -105,7 +105,7 @@
                                 <select class="form-control" name="class_id">
                                     <option disabled selected>Pilih Rombel</option>
                                     <?php foreach ($class as $item) { ?>
-                                        <option value="{{ $item->name }}" class="form-control mb-2 @error('class_id') is-invalid @enderror" >{{ $item->name }}</option>
+                                        <option value="{{ $item->name }}" value="{{ old('name') }}" class="form-control mb-2 @error('class_id') is-invalid @enderror" >{{ $item->name }}</option>
                                     <?php } ?>
                                 </select>
                                 @error('class_id')
@@ -121,7 +121,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <textarea type="text" name="address" class="form-control mb-2 @error('address') is-invalid @enderror" id="address" placeholder="Enter Address"></textarea>
+                                <textarea type="text" name="address" value="{{ old('address') }}" class="form-control mb-2 @error('address') is-invalid @enderror" id="address" placeholder="Enter Address"></textarea>
                                 @error('address')
                                     <div class="invalid-feedback">
                                         {{ $message }}
